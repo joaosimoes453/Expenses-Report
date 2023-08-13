@@ -51,6 +51,7 @@ SET e.category_id = c.id;
 -- Add a foreign key constraint to ensure referential integrity
 ALTER TABLE expenses ADD CONSTRAINT fk_expenses_category
     FOREIGN KEY (category_id) REFERENCES categories (id);
+```
 
 ## Contributions and Feedback
 This project showcases the fusion of Excel, Python, and MySQL to create a robust expense tracking application. Dive into the code, tailor it to your needs, and explore the realms of data management and visualization. Should you have questions, suggestions, or feedback, don't hesitate to get in touch. Your input aids in refining this project and enhancing skills for future endeavors.
