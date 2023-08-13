@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px;">
+
+    <h1>About Our Project</h1>
+    <p>Welcome to our Expense Reports web application project. This platform serves as a demonstration of our capabilities in creating efficient and user-friendly solutions. Please note that this is a fictional project created for learning purposes and does not represent a real production application.</p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>View and filter expenses</li>
+        <li>Easily search for specific expenses using keywords or categories.</li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, we'd love to hear from you. While this project is not associated with a real organization, your input can help us improve our skills and contribute to future projects. Feel free to <a href="{{ url_for('contact') }}">contact me</a> with your thoughts.</p>
+
+    <!-- Add link to Expense Reports page -->
+    <div style="position: fixed; bottom: 0; right: 0; margin: 20px;">
+    <a href="{{ url_for('index') }}">Back to Expense Reports</a>
+    </div>
+
+
+</body>
+</html>
