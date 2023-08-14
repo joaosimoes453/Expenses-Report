@@ -24,14 +24,14 @@ cursor = connection.cursor()
 # Iterate through rows and insert data into MySQL
 for row in sheet.iter_rows(min_row=2, values_only=True):
     date, category, amount, description = row
-    print("Inserting row:", date, category, amount, description)  # Debugging output
+    print("Inserting row:", date, category, amount, description)
     insert_query = "INSERT INTO expenses (date, category, amount, description) VALUES (%s, %s, %s, %s)"
     data = (date, category, amount, description)
     try:
         cursor.execute(insert_query, data)
         connection.commit()
     except mysql.connector.IntegrityError as e:
-        print("Duplicate entry, skipping:", e)  # Debugging output
+        print("Duplicate entry, skipping:", e)
 
 # Close the cursor and connection
 cursor.close()
