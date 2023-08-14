@@ -1,5 +1,7 @@
 import openpyxl
 import mysql.connector
+import os
+from dotenv import load_dotenv
 
 # Load the Excel workbook
 workbook = openpyxl.load_workbook('expenses.xlsx')
@@ -7,11 +9,11 @@ sheet = workbook.active
 
 # MySQL connection setup with connection timeout
 db_config = {
-    'host': 'localhost',
-    'port': '3306',
-    'user': 'root',
-    'password': 'Simoes.453',
-    'database': 'expenses_db',
+    'host': os.getenv('DB_HOST'),
+    'port': os.getenv('DB_PORT'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_NAME'),
     'connect_timeout': 300
 }
 

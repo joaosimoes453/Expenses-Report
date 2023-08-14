@@ -1,16 +1,18 @@
 from flask import Flask, render_template, request
 import mysql.connector
 import expenses_start
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # MySQL connection setup
 db_config = {
-    'host': 'localhost',
-    'port': '3306',
-    'user': 'root',
-    'password': 'Simoes.453',
-    'database': 'expenses_db',
+    'host': os.getenv('DB_HOST'),
+    'port': os.getenv('DB_PORT'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_NAME'),
     'connect_timeout': 300
 }
 
